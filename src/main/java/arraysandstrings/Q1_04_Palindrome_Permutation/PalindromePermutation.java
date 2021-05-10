@@ -14,7 +14,7 @@ public class PalindromePermutation {
                 .replaceAll("\\s+", "")
                 .chars()
                 .mapToObj(c -> (char) c)
-                .collect(Collectors.toList()); // removes whitespace
+                .collect(Collectors.toList());
 
         Set<Character> strUniqueChars = new HashSet<>(strChars);
 
