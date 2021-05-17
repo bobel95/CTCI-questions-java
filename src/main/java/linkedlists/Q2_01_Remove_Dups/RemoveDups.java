@@ -2,12 +2,9 @@ package linkedlists.Q2_01_Remove_Dups;
 
 import java.util.*;
 
-// Write code to remove duplicates from an unsorted linked list.
-// FOLLOW UP
-// How would you solve this problem if a temporary buffer is not allowed?
 public class RemoveDups {
 
-
+    // Write code to remove duplicates from an unsorted linked list.
     public void removeDups(LinkedList<Integer> list) {
 
         var occurrencesMap = new HashMap<Integer, Integer>();
@@ -37,4 +34,26 @@ public class RemoveDups {
         }
     }
 
+
+    // FOLLOW UP
+    // How would you solve this problem if a temporary buffer is not allowed?
+    public void removeDupsFollowUp(LinkedList<Integer> list) {
+        Collections.sort(list);
+
+        var iterator = list.listIterator();
+        while (iterator.hasNext()) {
+
+            int el1 = iterator.next();
+            if (iterator.hasNext()) {
+
+                int el2 = iterator.next();
+
+                if (el1 == el2) {
+                    iterator.remove();
+                }
+
+                iterator.previous();
+            }
+        }
+    }
 }

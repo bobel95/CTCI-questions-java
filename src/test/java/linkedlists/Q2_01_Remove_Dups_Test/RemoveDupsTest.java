@@ -50,4 +50,36 @@ public class RemoveDupsTest {
 
         assertEquals(expected, testList);
     }
+
+    @Test
+    void removeDupsFollowUp_allDuplicates_removesAllButOne() {
+        var testList = new LinkedList<>(List.of(1, 1, 1, 1, 1, 1, 1, 1));
+        var expected = new LinkedList<>(List.of(1));
+
+        removeDups.removeDupsFollowUp(testList);
+
+        assertEquals(expected, testList);
+    }
+
+    @Test
+    void removeDupsFollowUp_multipleDuplicates_removesAllDuplicates() {
+        var testList = new LinkedList<>(List.of(1, 1, 1, 1, 2, 3, 1, 2));
+        var expected = new LinkedList<>(List.of(1, 2, 3));
+
+        removeDups.removeDupsFollowUp(testList);
+
+        Collections.sort(testList);
+
+        assertEquals(expected, testList);
+    }
+
+    @Test
+    void removeDupsFollowUp_noDuplicates_doesNotModifyList() {
+        var testList = new LinkedList<>(List.of(1, 2, 3, 4));
+        var expected = new LinkedList<>(List.of(1, 2, 3, 4));
+
+        removeDups.removeDupsFollowUp(testList);
+
+        assertEquals(expected, testList);
+    }
 }
