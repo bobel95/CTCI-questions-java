@@ -4,6 +4,7 @@ package arraysandstrings.Q1_01_Is_Unique;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+// Implement an algorithm to determine if a string has all unique characters.
 public class IsUnique {
 
     public boolean areAllCharsUnique(String s) {

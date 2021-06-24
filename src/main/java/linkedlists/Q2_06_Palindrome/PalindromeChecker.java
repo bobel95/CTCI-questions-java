@@ -7,14 +7,6 @@ import java.util.List;
 //Implement a function to check if a linked list is a palindrome.
 public class PalindromeChecker {
 
-    public static void main(String[] args) {
-        var list = new SinglyLinkedList<Integer>();
-        list.addAll(List.of(1, 2, 3, 4, 5));
-
-        reverseList(list);
-        System.out.println(list);
-    }
-
     public boolean isPalindrome(SinglyLinkedList<Integer> list) {
 
         var reversedList = reverseList(list);

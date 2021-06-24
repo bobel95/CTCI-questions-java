@@ -2,6 +2,7 @@ package arraysandstrings.Q1_02_Check_Permutation;
 
 import java.util.Arrays;
 
+// Given two strings, write a method to decide if one is a permutation of the other.
 public class CheckPermutation {
 
     public int findPermutations(String a, String b) {
